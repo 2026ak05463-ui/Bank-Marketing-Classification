@@ -12,7 +12,7 @@ The project includes data preprocessing, model training, evaluation using multip
 - **Source:** [UCI Machine Learning Repository](https://archive.ics.uci.edu/dataset/222/bank+marketing)
 - **Instances:** 4,521
 - **Input Features:** 16
-- **Target Variable:** `y` (`yes` / `no)
+- **Target Variable:** `y` (`yes` / `no`)
 
 The dataset contains customer information and details of previous marketing campaigns.
 
@@ -32,8 +32,8 @@ The preprocessing steps include:
 
 - Separating input features and the target variable
 - Identifying numerical and categorical features
-- Applying StandardScaler to numerical features
-- Applying OneHotEncoder to categorical features
+- Applying `StandardScaler` to numerical features
+- Applying `OneHotEncoder` to categorical features
 - Splitting the dataset into training and testing sets
 - Using a preprocessing pipeline for consistent data transformation
 
@@ -83,6 +83,8 @@ Bank-Marketing-Classification/
 
 ## Installation
 
+Make sure Python is installed on your system.
+
 Install the required Python packages:
 
 ```bash
@@ -91,7 +93,13 @@ python -m pip install streamlit pandas scikit-learn joblib
 
 ## How to Run the Application
 
-Navigate to the project directory and run:
+Navigate to the project directory:
+
+```bash
+cd Bank-Marketing-Classification
+```
+
+Run the Streamlit application:
 
 ```bash
 python -m streamlit run app.py
