@@ -1,3 +1,5 @@
+
+
 # Bank Marketing Classification
 
 ## Project Overview
@@ -9,12 +11,11 @@ The project includes data preprocessing, model training, evaluation using multip
 ## Dataset
 
 - **Dataset:** Bank Marketing Dataset
-- **Source:** [UCI Machine Learning Repository](https://archive.ics.uci.edu/dataset/222/bank+marketing)
+- **Source:** [UCI Machine Learning Repository](https://archive.ics.uci.edu/dataset/222/bank)
 - **Instances:** 4,521
 - **Input Features:** 16
 - **Target Variable:** `y` (`yes` / `no`)
-
-The dataset contains customer information and details of previous marketing campaigns.
+- **Problem Type:** Binary Classification
 
 ## Machine Learning Models
 
@@ -48,7 +49,7 @@ The models are evaluated using the following performance metrics:
 - F1 Score
 - Matthews Correlation Coefficient (MCC)
 
-These metrics provide different perspectives on model performance, particularly for classification datasets with imbalanced target classes.
+These metrics help compare model performance, particularly when the target classes are imbalanced.
 
 ## Streamlit Application
 
@@ -68,16 +69,19 @@ Users can:
 
 ```text
 Bank-Marketing-Classification/
+│
 ├── app.py
 ├── ML Ass 2.ipynb
 ├── bank.csv
 ├── test_data.csv
+│
 ├── models/
 │   ├── logistic_regression.pkl
 │   ├── decision_tree.pkl
 │   ├── knn.pkl
 │   ├── gaussian_naive_bayes.pkl
 │   └── svm.pkl
+│
 └── README.md
 ```
 
@@ -119,8 +123,11 @@ http://localhost:8501
 
 ## Dataset Reference
 
-UCI Machine Learning Repository: [Bank Marketing Dataset](https://archive.ics.uci.edu/dataset/222/bank+marketing)
+UCI Machine Learning Repository: [Bank Marketing Dataset](https://archive.ics.uci.edu/dataset/222/bank)
 
 ## Conclusion
 
-This project demonstrates the implementation and comparison of five machine learning classification algorithms for predicting term deposit subscriptions. The Streamlit application provides an interactive way to evaluate the trained models and generate predictions.
+This project demonstrates the implementation and comparison of five machine learning classification algorithms for predicting term deposit subscriptions.
+
+The Streamlit application provides an interactive way to evaluate trained models, view performance metrics, and generate predictions.
+
