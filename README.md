@@ -1,69 +1,72 @@
-Bank Marketing Classification
+# Bank Marketing Classification
 
-Project Overview
+## Project Overview
 
 This project applies five machine learning classification algorithms to the Bank Marketing dataset to predict whether a customer will subscribe to a term deposit.
 
 The project includes data preprocessing, model training, evaluation using multiple performance metrics, and a Streamlit web application for model evaluation and prediction.
 
-Dataset
+## Dataset
 
-Dataset: Bank Marketing Dataset
+- **Dataset:** Bank Marketing Dataset
+- **Source:** [UCI Machine Learning Repository](https://archive.ics.uci.edu/dataset/222/bank+marketing)
+- **Instances:** 4,521
+- **Input Features:** 16
+- **Target Variable:** `y` (`yes` / `no)
 
-Source: UCI Machine Learning Repository
+The dataset contains customer information and details of previous marketing campaigns.
 
-Instances: 4,521
-
-Features: 16 input features
-
-Target variable: y (yes/no)
-
-Machine Learning Models
+## Machine Learning Models
 
 The following five classification models are implemented:
 
-Logistic Regression
+1. Logistic Regression
+2. Decision Tree
+3. K-Nearest Neighbors (KNN)
+4. Gaussian Naive Bayes
+5. Support Vector Machine (SVM)
 
-Decision Tree
+## Data Preprocessing
 
-K-Nearest Neighbors (KNN)
+The preprocessing steps include:
 
-Gaussian Naive Bayes
+- Separating input features and the target variable
+- Identifying numerical and categorical features
+- Applying StandardScaler to numerical features
+- Applying OneHotEncoder to categorical features
+- Splitting the dataset into training and testing sets
+- Using a preprocessing pipeline for consistent data transformation
 
-Support Vector Machine (SVM)
+## Model Evaluation
 
-Evaluation Metrics
+The models are evaluated using the following performance metrics:
 
-The models are evaluated using:
+- Accuracy
+- Area Under the ROC Curve (AUC)
+- Precision
+- Recall
+- F1 Score
+- Matthews Correlation Coefficient (MCC)
 
-Accuracy
+These metrics provide different perspectives on model performance, particularly for classification datasets with imbalanced target classes.
 
-Area Under the ROC Curve (AUC)
+## Streamlit Application
 
-Precision
+The Streamlit application provides an interactive interface for model evaluation and prediction.
 
-Recall
+Users can:
 
-F1 Score
+- Select a trained classification model
+- Upload a test CSV file
+- View evaluation metrics
+- View the confusion matrix
+- View the classification report
+- Generate predictions
+- Download prediction results
 
-Matthews Correlation Coefficient (MCC)
+## Project Structure
 
-Streamlit Application
-
-The application allows users to:
-
-Select a trained classification model
-
-Upload a test CSV file
-
-View evaluation metrics
-
-View the confusion matrix and classification report
-
-Generate predictions
-
-Project Structure
-
+```text
 Bank-Marketing-Classification/
 ├── app.py
 ├── ML Ass 2.ipynb
@@ -76,19 +79,40 @@ Bank-Marketing-Classification/
 │   ├── gaussian_naive_bayes.pkl
 │   └── svm.pkl
 └── README.md
+```
 
-How to Run the Application
+## Installation
 
-Install the required packages:
+Install the required Python packages:
 
-pip install streamlit pandas scikit-learn joblib
+```bash
+python -m pip install streamlit pandas scikit-learn joblib
+```
 
-Run the Streamlit application:
+## How to Run the Application
 
-streamlit run app.py
+Navigate to the project directory and run:
+
+```bash
+python -m streamlit run app.py
+```
 
 The application will open in your browser.
 
-Repository
+If it does not open automatically, visit:
 
-Bank-Marketing-Classification on GitHub
+```text
+http://localhost:8501
+```
+
+## Repository
+
+[Bank-Marketing-Classification on GitHub](https://github.com/2026ak05463-ui/Bank-Marketing-Classification)
+
+## Dataset Reference
+
+UCI Machine Learning Repository: [Bank Marketing Dataset](https://archive.ics.uci.edu/dataset/222/bank+marketing)
+
+## Conclusion
+
+This project demonstrates the implementation and comparison of five machine learning classification algorithms for predicting term deposit subscriptions. The Streamlit application provides an interactive way to evaluate the trained models and generate predictions.
